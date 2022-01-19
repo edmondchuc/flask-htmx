@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "flask-htmx"
-version = "0.1.0"
+version = "0.1.1"
 description = "A Flask extension to work with HTMX."
 authors = ["Edmond Chuc <edmond.chuc@gmail.com>"]
 license = "MIT"
