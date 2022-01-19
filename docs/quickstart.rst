@@ -66,3 +66,6 @@ the current URL of the browser of a HTMX request.
 
 Other HTMX request headers are also available.
 See https://htmx.org/reference/#request_headers.
+
+Continue to the next section of the docs,
+`The HTMX Class <https://flask-htmx.readthedocs.io/en/latest/flask_htmx.htmx.html>`_.
