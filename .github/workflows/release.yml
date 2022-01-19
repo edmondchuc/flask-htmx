@@ -41,7 +41,7 @@ jobs:
       - name: Install Python
         uses: actions/setup-python@v2
         with:
-          python-version: 3.x
+          python-version: 3.9
 
       - name: Install Python Poetry
         uses: snok/install-poetry@v1
@@ -50,4 +50,4 @@ jobs:
         run: |
           poetry version ${{ steps.version.outputs.value }}
           poetry build 
-          poetry publish --username __token__ --password ${{ secrets.PYPI_TOKEN }}
+          poetry publish --username=__token__ --password=${{ secrets.PYPI_TOKEN }}
