@@ -26,13 +26,21 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
 
-      - name: Install Python Poetry
-        uses: snok/install-poetry@v1
-
       - name: Ensure README.rst builds correctly for PyPI
         run: |
           pip install readme-renderer
           python -m readme_renderer README.rst
+
+      - name: Install Python Poetry
+        uses: snok/install-poetry@v1
+
+      - name: Install project
+        run: |
+          poetry install
+
+      - name: Ensure the docs build correctly
+        run: |
+          make --directory=docs html
 
       - name: Run pytest
         run: echo todo
