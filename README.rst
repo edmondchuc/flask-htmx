@@ -44,7 +44,7 @@ You can register the HTMX object by passing the Flask
     htmx = HTMX(app)
 
 Or you can register the HTMX object using
-:py:meth:`.HTMX.init_app`.
+`HTMX.init_app() <https://flask-htmx.readthedocs.io/en/latest/flask_htmx.htmx.html#flask_htmx.htmx.HTMX.init_app>`_.
 
 .. code-block:: python
 
@@ -69,8 +69,8 @@ A minimal working example.
 
 The above example checks whether the request came
 from HTMX or not. If :code:`htmx` evaluates to
-:py:obj:`True`, then it was a HTMX request, else
-:py:obj:`False`.
+`True <https://docs.python.org/3/library/constants.html#True>`_, then it was a HTMX request, else
+`False <https://docs.python.org/3/library/constants.html#False>`_.
 
 This allows you to return a partial
 HTML when it's a HTMX request or the full page HTML
