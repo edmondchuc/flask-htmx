@@ -31,7 +31,7 @@ jobs:
 
       - name: Ensure README.rst builds correctly for PyPI
         run: |
-          poetry add readme-renderer
+          pip install readme-renderer
           python -m readme_renderer README.rst
 
       - name: Run pytest
