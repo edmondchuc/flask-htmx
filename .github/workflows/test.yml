@@ -40,4 +40,5 @@ jobs:
           poetry run make --directory=docs html
 
       - name: Run pytest
-        run: echo todo
+        run: |
+          poetry run pytest
