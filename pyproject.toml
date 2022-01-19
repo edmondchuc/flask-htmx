@@ -4,10 +4,10 @@ version = "0.1.0"
 description = "A Flask extension to work with HTMX."
 authors = ["Edmond Chuc <edmond.chuc@gmail.com>"]
 license = "MIT"
-readme = "README.md"
+readme = "README.rst"
 homepage = "https://github.com/edmondchuc/flask-htmx"
 repository = "https://github.com/edmondchuc/flask-htmx"
-#documentation = ""
+documentation = "https://flask-htmx.readthedocs.io"
 keywords = ["Flask", "HTMX", "Python", "Web"]
 classifiers = [
     "Environment :: Web Environment",
