@@ -26,7 +26,7 @@ jobs:
       - name: Ensure README.rst builds correctly for PyPI
         run: |
           pip install readme-renderer
-          python -m readme_renderer README.rst
+          python -m readme_renderer README.rst >/dev/null
 
       - name: Install Python Poetry
         uses: snok/install-poetry@v1
