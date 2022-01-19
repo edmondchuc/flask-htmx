@@ -26,13 +26,13 @@ Quickstart
 
 Install the extension with pip.
 
-.. code-block:: none
+.. code-block:: bash
 
     pip install flask-htmx
 
 Or perhaps you use Poetry.
 
-.. code-block:: none
+.. code-block:: bash
 
     poetry add flask-htmx
 
