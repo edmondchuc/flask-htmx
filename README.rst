@@ -109,4 +109,5 @@ Docs
 ----
 
 .. code-block:: bash
+
     sphinx-autobuild docs docs/_build/html
