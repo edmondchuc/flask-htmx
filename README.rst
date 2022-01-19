@@ -19,7 +19,7 @@ A Flask extension to work with HTMX.
 
 Documentation: https://flask-htmx.readthedocs.io
 
-.. include:: docs/quickstart.rst
+.. readme_include
 
 Development
 ===========
