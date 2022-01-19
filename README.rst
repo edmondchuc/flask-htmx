@@ -101,11 +101,13 @@ Development
 Installation
 ------------
 
-.. code-block:: none
+.. code-block:: bash
+
     poetry install
 
 Docs
 ----
 
-.. code-block:: none
+.. code-block:: bash
+
     sphinx-autobuild docs docs/_build/html
