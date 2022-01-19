@@ -1,0 +1,44 @@
+name: Run tests
+
+on:
+  # Make workflow callable.
+  workflow_call:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
+
+    steps:
+      - name: Checkout the repo
+        uses: actions/checkout@v2
+
+      - name: Use Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Ensure README.rst builds correctly for PyPI
+        run: |
+          pip install readme-renderer
+          python -m readme_renderer README.rst
+
+      - name: Install Python Poetry
+        uses: snok/install-poetry@v1
+
+      - name: Install project
+        run: |
+          poetry install
+
+      - name: Ensure the docs build correctly
+        run: |
+          poetry run make --directory=docs html
+
+      - name: Run pytest
+        run: |
+          poetry run pytest
