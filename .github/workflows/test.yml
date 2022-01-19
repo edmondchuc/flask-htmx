@@ -3,11 +3,8 @@ name: Run tests
 on:
   # Make workflow callable.
   workflow_call:
-  push:
-    branches:
-      # Run tests on all branches except "main".
-      - "**"
-      - "!main"
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   test:
@@ -40,7 +37,7 @@ jobs:
 
       - name: Ensure the docs build correctly
         run: |
-          make --directory=docs html
+          poetry run make --directory=docs html
 
       - name: Run pytest
         run: echo todo
