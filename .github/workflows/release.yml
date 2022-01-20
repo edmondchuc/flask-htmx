@@ -62,13 +62,13 @@ jobs:
         uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          directory: ./coverage/reports/
+          directory: ./
           env_vars: OS,PYTHON
           fail_ci_if_error: true
-          files: ./coverage1.xml,./coverage2.xml
+          files: ./coverage.xml
           flags: unittests
-          name: codecov-umbrella
-          path_to_write_report: ./coverage/codecov_report.txt
+          name: flask-htmx
+          path_to_write_report: ./codecov_report.txt
           verbose: true
 
       - name: Publish to PyPI
