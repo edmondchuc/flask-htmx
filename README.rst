@@ -110,6 +110,20 @@ Installation
 
     poetry install
 
+Running tests
+-------------
+
+.. code-block:: bash
+
+    poetry run pytest
+
+Coverage
+--------
+
+.. code-block:: bash
+
+    poetry run pytest --cov=flask_htmx tests/
+
 Docs
 ----
 
