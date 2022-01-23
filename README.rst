@@ -20,6 +20,15 @@ Flask-HTMX
 .. image:: https://img.shields.io/badge/License-MIT-red.svg
     :target: https://github.com/edmondchuc/flask-htmx/blob/main/LICENSE
 
+.. image:: https://static.pepy.tech/personalized-badge/flask-htmx?period=month&units=international_system&left_color=grey&right_color=blue&left_text=downloads/week
+    :target: https://pepy.tech/project/flask-htmx
+
+.. image:: https://static.pepy.tech/personalized-badge/flask-htmx?period=month&units=international_system&left_color=grey&right_color=blue&left_text=downloads/month
+    :target: https://pepy.tech/project/flask-htmx
+
+.. image:: https://static.pepy.tech/personalized-badge/flask-htmx?period=total&units=international_system&left_color=grey&right_color=blue&left_text=downloads
+    :target: https://pepy.tech/project/flask-htmx
+
 A Flask extension to work with HTMX.
 
 Documentation: https://flask-htmx.readthedocs.io
