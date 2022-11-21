@@ -112,7 +112,7 @@ HTMX Response
 
 You might be interested on adding
 `htmx response headers <https://htmx.org/reference/#response_headers>`_ to your response.
-Use :code:`htmx_flask.make_response` for that. For example, instead of:
+Use :code:`flask_htmx.make_response` for that. For example, instead of:
 
 .. code-block:: python
 
@@ -133,7 +133,7 @@ You can do:
 
 .. code-block:: python
 
-    from htmx_flask import make_response
+    from flask_htmx import make_response
     from my_app import app
 
     @app.route("/hola-mundo")
