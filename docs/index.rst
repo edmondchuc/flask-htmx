@@ -16,3 +16,4 @@ functionality for working with `HTMX <https://htmx.org/>`_.
 
    quickstart
    flask_htmx.htmx
+   flask_htmx.responses

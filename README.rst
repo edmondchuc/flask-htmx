@@ -50,6 +50,9 @@ Or perhaps you use Poetry.
 
     poetry add flask-htmx
 
+HTMX Request
+------------
+
 You can register the HTMX object by passing the Flask
 :code:`app` object via the constructor.
 
@@ -104,10 +107,49 @@ the current URL of the browser of a HTMX request.
 Other HTMX request headers are also available.
 See https://htmx.org/reference/#request_headers.
 
-Continue to the next section of the docs,
-`The HTMX Class <https://flask-htmx.readthedocs.io/en/latest/flask_htmx.htmx.html>`_.
+HTMX Response
+-------------
+
+You might be interested on adding
+`htmx response headers <https://htmx.org/reference/#response_headers>`_ to your response.
+Use :code:`flask_htmx.make_response` for that. For example, instead of:
+
+.. code-block:: python
+
+    import json
+    from flask import make_response
+    from my_app import app
+
+    @app.route("/hola-mundo")
+    def hola_mundo():
+        body = "Hola Mundo!"
+        response = make_response(body)
+        response.headers["HX-Push-URL"] = "false"
+        trigger_string = json.dumps({"event1":"A message", "event2":"Another message"})
+        response.headers["HX-Trigger"] = trigger_string
+        return response
+
+You can do:
+
+.. code-block:: python
+
+    from flask_htmx import make_response
+    from my_app import app
+
+    @app.route("/hola-mundo")
+    def hola_mundo():
+        body = "Hola Mundo!"
+        return make_response(
+            body,
+            push_url=False,
+            trigger={"event1": "A message", "event2": "Another message"},
+        )
 
 .. quickstart-endblock
+
+Documentation
+=============
+Visit the `full documentation <https://flask-htmx.readthedocs.io>`_.
 
 Development
 ===========

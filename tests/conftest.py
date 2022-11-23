@@ -5,8 +5,9 @@ from flask_htmx import HTMX
 from flask_htmx.responses import HTMXResponseClientRedirect, HTMXResponseStopPolling
 
 
-@pytest.fixture(scope="function")
-def client():
+
+@pytest.fixture(scope="session")
+def flask_app():
     app = Flask(__name__)
     app.config["TESTING"] = True
     htmx = HTMX(app)
@@ -51,5 +52,9 @@ def client():
     def hx_trigger_stop_polling():
         return HTMXResponseStopPolling()
 
-    with app.test_client() as client:
+    yield app
+
+@pytest.fixture(scope="function")
+def client(flask_app):
+    with flask_app.test_client() as client:
         yield client
