@@ -27,7 +27,8 @@ class HTMX:
 
     @property
     def boosted(self) -> bool:
-        """:py:obj:`True` if the request came from an element with the `hx-boost` attribute.
+        """:py:obj:`True` if the request came from an element with the `hx-boost`
+        attribute.
 
         Based on the :code:`HX-Boosted` header.
         """
@@ -43,7 +44,8 @@ class HTMX:
 
     @property
     def history_restore_request(self) -> bool:
-        """:py:obj:`True` if the request is for history restoration after a miss in the local history cache.
+        """:py:obj:`True` if the request is for history restoration after a miss in the
+        local history cache.
 
         Based on the :code:`HX-History-Restore-Request` header.
         """
