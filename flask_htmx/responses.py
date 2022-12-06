@@ -6,16 +6,14 @@ import typing
 from flask import Response
 from flask import make_response as flask_make_response
 
-from flask_htmx.constants import HX_FALSE, HX_TRUE, RESWAPS, HTMX_STOP_POLLING
+from flask_htmx.constants import HTMX_STOP_POLLING, HX_FALSE, HX_TRUE, RESWAPS
 
 
 class HTMXResponseClientRedirect(Response):
     """Flask response to instruct HTMX to perform a client-side redirect."""
 
     def __init__(self, redirect_to: str, status: int = 200):
-        super(HTMXResponseClientRedirect, self).__init__(
-            None, status=status, headers={"HX-Redirect": redirect_to}
-        )
+        super().__init__(None, status=status, headers={"HX-Redirect": redirect_to})
 
 
 class HTMXResponseStopPolling(Response):
@@ -28,7 +26,7 @@ class HTMXResponseStopPolling(Response):
         mimetype="text/html",
         direct_passthrough=False,
     ):
-        super(HTMXResponseStopPolling, self).__init__(
+        super().__init__(
             response=response,
             status=HTMX_STOP_POLLING,
             headers=headers,

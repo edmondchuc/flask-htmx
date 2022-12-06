@@ -28,7 +28,6 @@ python = "^3.8"
 Flask = "^2.0.2"
 
 [tool.poetry.dev-dependencies]
-black = "^21.12b0"
 pytest = "^6.2.5"
 pytest-cov = "^3.0.0"
 pytest-mock = "^3.6.1"
@@ -36,6 +35,7 @@ Sphinx = "^4.4.0"
 furo = "^2022.1.2"
 sphinx-autobuild = "^2021.3.14"
 sphinx-copybutton = "^0.4.0"
+pre-commit = ">=2.20.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
@@ -43,3 +43,13 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/edmondchuc/flask-htmx/issues"
+
+[tool.isort]
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+line_length = 88
+
+[tool.black]
+line_length = 88
