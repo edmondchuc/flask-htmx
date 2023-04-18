@@ -32,7 +32,7 @@ class HTMX:
 
         Based on the :code:`HX-Boosted` header.
         """
-        return request.headers.get("HX-Boost") == "true"
+        return request.headers.get("HX-Boosted") == "true"
 
     @property
     def current_url(self) -> Optional[str]:

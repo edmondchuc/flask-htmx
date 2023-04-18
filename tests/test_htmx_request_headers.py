@@ -2,7 +2,7 @@ from flask.testing import FlaskClient
 
 
 def test_hx_boost_true(client: FlaskClient):
-    headers = {"HX-Boost": "true"}
+    headers = {"HX-Boosted": "true"}
     rv = client.get("/hx-boost", headers=headers)
     assert rv.data.decode("utf-8") == "True"
 
