@@ -6,7 +6,8 @@ HX_FALSE = "false"
 RESWAPS = [
     "innerHTML",
     "outerHTML",
-    "beforebegin" "afterbegin",
+    "beforebegin",
+    "afterbegin",
     "beforeend",
     "afterend",
     "delete",
