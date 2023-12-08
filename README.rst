@@ -72,7 +72,7 @@ A minimal working example.
 
 .. code-block:: python
 
-    from flask import Flask
+    from flask import Flask, render_template
     from flask_htmx import HTMX
 
     app = Flask(__name__)
