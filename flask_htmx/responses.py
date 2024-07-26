@@ -81,9 +81,9 @@ def make_response(
     :param trigger: Allows you to trigger client side events. Accepts a string or a dict
         (:code:`HX-Trigger`).
     :param trigger_after_settle: Allows you to trigger client side events. Accepts a
-        string or a dict (:code:`HT-Trigger-After-Settle`).
+        string or a dict (:code:`HX-Trigger-After-Settle`).
     :param trigger_after_swap: Allows you to trigger client side events. Accepts a
-        string or a dict (:code:`HT-Trigger-After-Swap`).
+        string or a dict (:code:`HX-Trigger-After-Swap`).
     :return: A Flask Response with htmx headers.
     """
     if reswap and reswap not in RESWAPS:
