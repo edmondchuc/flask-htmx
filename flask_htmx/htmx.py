@@ -71,7 +71,7 @@ class HTMX:
     def target(self) -> Optional[str]:
         """The ID of the target element if it exists, or :py:obj:`None`.
 
-        Based on the :code:`HX-Target header`.
+        Based on the :code:`HX-Target` header.
         """
         return request.headers.get("HX-Target")
 
