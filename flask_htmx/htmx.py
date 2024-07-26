@@ -25,6 +25,10 @@ class HTMX:
         """Initialise the extension with the Flask app object."""
         app.htmx = self
 
+        @app.context_processor
+        def htmx_context_processor():
+            return {'htmx': self}
+
     @property
     def boosted(self) -> bool:
         """:py:obj:`True` if the request came from an element with the `hx-boost`
@@ -67,7 +71,7 @@ class HTMX:
     def target(self) -> Optional[str]:
         """The ID of the target element if it exists, or :py:obj:`None`.
 
-        Based on the :code:`HX-Target header`.
+        Based on the :code:`HX-Target` header.
         """
         return request.headers.get("HX-Target")
 
