@@ -41,16 +41,16 @@ def _stringify(val):
 
 def make_response(
     *args: typing.Any,
-    location: str | dict | None = None,
+    location: str | typing.Dict[str, str] | None = None,
     push_url: str | typing.Literal[False] | None = None,
     redirect: str | None = None,
     refresh: bool = False,
     replace_url: str | typing.Literal[False] | None = None,
     reswap: str | None = None,
     retarget: str | None = None,
-    trigger: str | dict | None = None,
-    trigger_after_settle: str | dict | None = None,
-    trigger_after_swap: str | dict | None = None,
+    trigger: str | typing.Dict[str, str] | None = None,
+    trigger_after_settle: str | typing.Dict[str, str] | None = None,
+    trigger_after_swap: str | typing.Dict[str, str] | None = None,
 ) -> Response:
     """
     This function can be used as a replacement from :code:`flask.make_response` to
