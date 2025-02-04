@@ -16,7 +16,7 @@ class HTMX:
     - https://github.com/adamchainz/django-htmx
     """
 
-    def __init__(self, app: Flask = None):
+    def __init__(self, app: Optional[Flask] = None):
         self.app = app
         if app is not None:
             self.init_app(app)

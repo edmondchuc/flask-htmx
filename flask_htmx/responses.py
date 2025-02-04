@@ -6,7 +6,13 @@ import typing
 from flask import Response
 from flask import make_response as flask_make_response
 
-from flask_htmx.constants import HTMX_STOP_POLLING, HX_FALSE, HX_TRUE, RESWAPS
+from flask_htmx.constants import (
+    HTMX_STOP_POLLING,
+    HX_FALSE,
+    HX_TRUE,
+    RESWAPS,
+    ReSwapType,
+)
 
 
 class HTMXResponseClientRedirect(Response):
@@ -41,16 +47,16 @@ def _stringify(val):
 
 def make_response(
     *args: typing.Any,
-    location: str | dict | None = None,
-    push_url: str | False | None = None,
+    location: str | typing.Dict[str, str] | None = None,
+    push_url: str | typing.Literal[False] | None = None,
     redirect: str | None = None,
     refresh: bool = False,
-    replace_url: str | False | None = None,
-    reswap: str | None = None,
+    replace_url: str | typing.Literal[False] | None = None,
+    reswap: ReSwapType | None = None,
     retarget: str | None = None,
-    trigger: str | dict | None = None,
-    trigger_after_settle: str | dict | None = None,
-    trigger_after_swap: str | dict | None = None,
+    trigger: str | typing.Dict[str, str] | None = None,
+    trigger_after_settle: str | typing.Dict[str, str] | None = None,
+    trigger_after_swap: str | typing.Dict[str, str] | None = None,
 ) -> Response:
     """
     This function can be used as a replacement from :code:`flask.make_response` to
