@@ -42,10 +42,10 @@ def _stringify(val):
 def make_response(
     *args: typing.Any,
     location: str | dict | None = None,
-    push_url: str | False | None = None,
+    push_url: str | typing.Literal[False] | None = None,
     redirect: str | None = None,
     refresh: bool = False,
-    replace_url: str | False | None = None,
+    replace_url: str | typing.Literal[False] | None = None,
     reswap: str | None = None,
     retarget: str | None = None,
     trigger: str | dict | None = None,
